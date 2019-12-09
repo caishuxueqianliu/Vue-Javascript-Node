@@ -2,47 +2,139 @@
   
   <div id="app">
   
-     
+        
 
 
+<!-- 
+<el-button @click="drawer = true" type="success" />
 
-   
+
+<el-drawer
+  title="我是标题"
+  :visible.sync="drawer"
+  :with-header="false"
+  direction='ttb'
+  size='50%''>
+<el-row :gutter="20">
+  <el-col :span="6"><div @click="drawers = true" class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+<el-row :gutter="20">
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+<el-row :gutter="20">
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+<el-row :gutter="20">
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+</el-drawer>
+
+<el-drawer
+  title="我是标题"
+  :visible.sync="drawers"
+  :with-header="false"
+  direction='btt'
+  size='50%''>
+<el-row :gutter="20">
+  <el-col :span="6"><div  class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+<el-row :gutter="20">
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+<el-row :gutter="20">
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+<el-row :gutter="20">
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
+</el-row>
+</el-drawer> -->
+
+
 <router-view> </router-view>
 
 
-
-
-  <div id="nav">
-  
-<mt-tabbar >
-     <router-link to="/home">
-  <mt-tab-item id="1">
-    <img slot="icon" >
-   1
-  </mt-tab-item>
-
- </router-link> 
-  <router-link to="/about">
-  <mt-tab-item id="2">
-    <img slot="icon" >
-   2
-  </mt-tab-item>
-   </router-link> 
-  <mt-tab-item id="3">
-    <img slot="icon" >
-    3
-  </mt-tab-item>
-  <mt-tab-item id="4">
-    <img slot="icon" >
-    4
-  </mt-tab-item>
-</mt-tabbar>    
-    </div>
-
   </div>
 </template>
+<script>
+  export default {
+    data() {
+      return {
+        // drawer: false,
+        // drawers: false,
+      };
+    },
+    methods: {
+     
+      
+    }
 
-<style>
 
+
+
+
+
+
+
+
+
+  };
+</script>
+<style lang="less" scoped="" type="">
+.el-button{
+  position: absolute;
+ margin: 0px;
+width: 100%;
+
+
+}
+.el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 50px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
 </style>
-

@@ -2,21 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import $ from 'jquery'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
 
-Vue.use(MintUI)
-// 1. 导入 ant-design-vue 组件库
-import Antd from 'ant-design-vue'
-// 2. 导入组件库的样式表
-import 'ant-design-vue/dist/antd.css'
+import axios from 'axios'
+Vue.prototype.$http=axios
+
+// axios.defaults.baseURL='https://renoblog.xyz/api/private/v1/'
 
 Vue.config.productionTip = false
-// 3. 安装组件库
-Vue.use(Antd)
+
 
 
 
