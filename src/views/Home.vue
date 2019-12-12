@@ -1,24 +1,36 @@
 <template>
   <div id="app">
-    <div>
-      
-         <el-row :gutter="0">
-  <el-col :xs="8" :sm="6" :md="4" :lg="2" :xl="2"><div class="grid-content bg-purple">1</div></el-col>
-<el-col :xs="4" :sm="6" :md="8" :lg="10" :xl="10"><div class="grid-content bg-purple-light">4</div></el-col>
-  <el-col :xs="4" :sm="6" :md="8" :lg="2" :xl="10"><div class="grid-content bg-purple">3</div></el-col>
-  <el-col :xs="8" :sm="6" :md="4" :lg="10" :xl="2"><div class="grid-content bg-purple-light">4</div></el-col>
-</el-row>
-    </div>
-    <div class="container">
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
-<div class="row">
-  <div class="col-xs-4 col-sm-3 col-md-2 col-xl-1 col-1"><div class="grid-content bg-purple">1</div></div>
-  <div class="col-xs-2 col-sm-3 col-md-4 col-xl-5 col-5"><div class="grid-content bg-purple-light">1</div></div>
-    <div class="col-xs-2 col-sm-3 col-md-4 col-xl-1 col-5"><div class="grid-content bg-purple">1</div></div>
-      <div class="col-xs-4 col-sm-3 col-md-2 col-xl-5 col-1"><div class="grid-content bg-purple-light">1</div></div>
-</div>
-      </div>
 
+<el-container>
+  <el-header>Header</el-header>
+  <el-container>
+    <el-aside width="400px">Aside</el-aside>
+    <el-main>
+<el-menu :default-active="activeIndex" class="el-menu-demo" active-text-color="#409eff" mode="horizontal" @select="handleSelect">
+  <el-menu-item index="1">HTML5</el-menu-item>
+  <el-menu-item index="2">CSS3</el-menu-item>
+  <el-menu-item index="3">JavaScript</el-menu-item>
+ <el-menu-item index="4">Vue</el-menu-item>
+ <el-menu-item index="5">React</el-menu-item>
+ <el-menu-item index="6">Ajax</el-menu-item>
+ <el-menu-item index="7">Jquery</el-menu-item>
+ <el-menu-item index="8">Responsive</el-menu-item>
+ <el-menu-item index="9">Node</el-menu-item>
+</el-menu>
+<div style="margin-top: 15px;">
+<el-card>
+123
+
+<div class='box'>
+  <p>demo</p>
+  <p>vue</p>
+</div>
+</el-card>
+</div>
+
+</el-main>
+  </el-container>
+</el-container>
 
 
   </div>
@@ -26,40 +38,48 @@
 
 <script>
 
+
 export default {
-  name: 'app',
+
+
   data() {
+  
     return {
-    }
-  }
+    
+      }
+    },
+    
+  created() {
+
+  },
+  mounted() {
+  
+  },
+  destroyed() {
+   
+  },
+  methods: {
+  
+
+
+
+
+ }
 }
 </script>
 
-<style scoped>
-  .el-col {
-    border-radius: 4px;
-  }
-  .bg-purple-dark {
-    background: #99a9bf;
-  }
-  .bg-purple {
-    background: #d3dce6;
-  }
-  .bg-purple-light {
-    background: #e5e9f2;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
-  .no-gutters {
-  margin-right: 0;
-  margin-left: 0;
+<style lang="less" scoped="" type="">
+@he:#24292e;
+@wi:100px;
+.el-header{
+background:@he;
 
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
+}
+.box{
+width:4.5*@wi;
+height:1.2*@wi;
+border:1px solid #d1d5da;
+border-radius: 3px;
+
 }
 </style>
