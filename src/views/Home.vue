@@ -6,7 +6,7 @@
   <el-container>
     <el-aside width="400px">Aside</el-aside>
     <el-main>
-<el-menu :default-active="activeIndex" class="el-menu-demo" active-text-color="#409eff" mode="horizontal" @select="handleSelect">
+<el-menu :default-active="activeIndex" class="el-menu-demo" active-text-color="#409eff" mode="horizontal" >
   <el-menu-item index="1">HTML5</el-menu-item>
   <el-menu-item index="2">CSS3</el-menu-item>
   <el-menu-item index="3">JavaScript</el-menu-item>
@@ -19,11 +19,11 @@
 </el-menu>
 <div style="margin-top: 15px;">
 <el-card>
-123
+
 
 <div class='box'>
-  <p>demo</p>
-  <p>vue</p>
+  <a href='javascript:void(0)' @click="js1()">变量</a>
+  <p>var-const-let</p>
 </div>
 </el-card>
 </div>
@@ -45,7 +45,8 @@ export default {
   data() {
   
     return {
-    
+       activeIndex: '3',
+       
       }
     },
     
@@ -59,7 +60,12 @@ export default {
    
   },
   methods: {
-  
+  js1(){
+
+
+    this.$router.push('./js1')
+
+  }
 
 
 

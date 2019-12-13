@@ -9,7 +9,9 @@ Vue.axios.get(api).then((response) => {
 <el-button @click='axios1()' type="primary"></el-button>
 <el-button @click='axios2()' type="primary"></el-button>
 <el-button @click='axios3()' type="primary"></el-button>
+{{data}}
 
+<div id='data'></div>
    </div>
 
 </template>
@@ -22,7 +24,7 @@ export default {
   data() {
   
     return {
-
+data:''
       }
     },
     
@@ -45,7 +47,8 @@ export default {
   return this.$message.error('获取用户列表失败')
  }
 this.$message.success('获取用户列表成功')
-  console.log(res,data)
+  console.log(res.data)
+  this.data=res.data
 
 
 
@@ -53,6 +56,8 @@ this.$message.success('获取用户列表成功')
   axios3(){
 this.$http.get("http://www.liulongbin.top:3005/api/getnewslist").then((response) => {
   console.log(response.data)
+ document.getElementById('data').innerText=JSON.stringify(response.data)
+
 })
   
 },
