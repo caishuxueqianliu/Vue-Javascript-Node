@@ -6,7 +6,7 @@
   <el-container>
     <el-aside width="400px">Aside</el-aside>
     <el-main>
-<el-menu :default-active="activeIndex" class="el-menu-demo" active-text-color="#409eff" mode="horizontal" >
+<el-menu :default-active="activeIndex" class="el-menu-demo" active-text-color="#409eff" mode="horizontal"   @select="handleSelect">
   <el-menu-item index="1">HTML5</el-menu-item>
   <el-menu-item index="2">CSS3</el-menu-item>
   <el-menu-item index="3">JavaScript</el-menu-item>
@@ -17,16 +17,61 @@
  <el-menu-item index="8">Responsive</el-menu-item>
  <el-menu-item index="9">Node</el-menu-item>
 </el-menu>
-<div style="margin-top: 15px;">
-<el-card>
+<div  style="margin-top: 15px;">
+<el-card v-if="index=='3'">
 
-
+<el-row>
+  <el-col :span="12">
 <div class='box'>
-  <a href='javascript:void(0)' @click="js1()">变量</a>
-  <p>var-const-let</p>
+  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
+  <p class='content'>var-const-let的区别基本认识</p>
 </div>
+</el-col>
+
+  <el-col :span="12">
+<div class='box'>
+  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
+  <p class='content'>var-const-let的区别基本认识</p>
+</div>
+</el-col>
+ </el-row>
+
+<el-row>
+  <el-col :span="12">
+<div class='box'>
+  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
+  <p class='content'>var-const-let的区别基本认识</p>
+</div>
+</el-col>
+
+  <el-col :span="12">
+<div class='box'>
+  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
+  <p class='content'>var-const-let的区别基本认识</p>
+</div>
+</el-col>
+ </el-row>
+
+ <el-row>
+  <el-col :span="12">
+<div class='box'>
+  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
+  <p class='content'>var-const-let的区别基本认识</p>
+</div>
+</el-col>
+
+  <el-col :span="12">
+<div class='box'>
+  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
+  <p class='content'>var-const-let的区别基本认识</p>
+</div>
+</el-col>
+ </el-row>
 </el-card>
+
+
 </div>
+
 
 </el-main>
   </el-container>
@@ -46,7 +91,7 @@ export default {
   
     return {
        activeIndex: '3',
-       
+       index:'3'
       }
     },
     
@@ -60,6 +105,10 @@ export default {
    
   },
   methods: {
+  handleSelect(index){
+    console.log(index)
+         this.index=index;
+  },
   js1(){
 
 
@@ -87,5 +136,17 @@ height:1.2*@wi;
 border:1px solid #d1d5da;
 border-radius: 3px;
 
+}
+.tilte{
+ margin-left:10%;
+ position: relative;
+ top:20px;
+}
+.content{
+ margin-top: 30px;
+  margin-left:10%;
+}
+.el-row{
+  margin-bottom: 20px;
 }
 </style>
