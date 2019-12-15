@@ -5,10 +5,18 @@ padding: 0;
 
 
 }
-.card{
 
-     width: 200px;
-     border-radius: 5px;
+b{
+  color: yellow;
+}
 
-
+.el-breadcrumb{
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color:gray;
+}
+pre{
+    color: white;
+  
 }

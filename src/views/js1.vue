@@ -204,23 +204,16 @@ b[2]()
 </script>
 
 <style lang="less" scoped="" type="">
-.card{
+.el-alert{
+  margin-bottom: 20px;
+}
+
+.card {
   height: 300px;
      width: 200px;
      border-radius: 5px;
     background-color: gray;
     color: white;
 }
-b{
-  color: red;
-}
-.el-alert{
-  margin-bottom: 20px;
-}
-.el-breadcrumb{
-  font-size: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  color:gray;
-}
+
 </style>

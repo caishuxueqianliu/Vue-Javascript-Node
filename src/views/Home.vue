@@ -30,8 +30,8 @@
 
   <el-col :span="12">
 <div class='box'>
-  <a class='tilte' href='javascript:void(0)' @click="js1()">变量</a>
-  <p class='content'>var-const-let的区别基本认识</p>
+  <a class='tilte' href='javascript:void(0)' @click="js2()">数组</a>
+  <p class='content'>数组的方法</p>
 </div>
 </el-col>
  </el-row>
@@ -114,8 +114,14 @@ export default {
 
     this.$router.push('./js1')
 
-  }
+  },
 
+  js2(){
+
+
+    this.$router.push('./js2')
+
+  }
 
 
 
