@@ -172,35 +172,105 @@ document.getElementById('t3').innerText=(text)
 },
 ce4(){
 
- var a=['1','5','1'];
-   console.log(a);
-   console.log(a.toString());
-   console.log(a.valueOf());
-console.log(a.splice(0,1))
+//  var a=['1','5','1'];
+//    console.log(a);
+//    console.log(a.toString());
+//    console.log(a.valueOf());
+// console.log(a.splice(0,1))
 
- var i= a.push(4,4,5,7);
- console.log(a);
- console.log(i);
- console.log(a.length);
+//  var i= a.push(4,4,5,7);
+//  console.log(a);
+//  console.log(i);
+//  console.log(a.length);
 
-var j=a.pop();
- console.log(a);
- console.log(j);
- console.log(a.length);
+// var j=a.pop();
+//  console.log(a);
+//  console.log(j);
+//  console.log(a.length);
 
-var first=a.shift();
-console.log(first);
-console.log(a.length);
-console.log(a);
+// var first=a.shift();
+// console.log(first);
+// console.log(a.length);
+// console.log(a);
 
-a.unshift(0);
-console.log(a);
+// a.unshift(0);
+// console.log(a);
 
-var aa=a.reverse();
-console.log(aa)
+// var aa=a.reverse();
+// console.log(aa)
 
-console.log(aa.sort())
+// console.log(aa.sort())
 
+var a=['a','b','c'];
+console.log(a)
+var b=['e','f'];
+console.log(b)
+a.splice(1,1,'e','f'); 
+console.log(a)
+var c=a.concat(b)
+console.log(c)
+var d=a.slice(0,1)
+console.log(d)
+b.push('g')
+console.log(b)
+b.pop()
+console.log(b)
+b.unshift('d')
+console.log(b)
+
+b.shift()
+console.log(b)
+
+console.log('----')
+var c=[1,8,4,5]
+console.log(c)
+c.reverse()
+console.log(c)
+c.sort()
+console.log(c)
+
+console.log(Math.min.apply(c,c))
+
+console.log(Math.max.apply(null,c))
+
+//  map() 方法通过对每个数组元素执行函数来创建新数组。
+
+// map() 方法不会对没有值的数组元素执行函数。
+
+// map() 方法不会更改原始数组。
+console.log(c.map((item,index)=>{
+  
+	return item*2;
+}))
+
+console.log(c.filter((item,index)=>{
+	index=2;
+	return item>4;
+}))
+ 
+console.log(c.reduce((total,item)=>{
+	return total+item
+}))
+
+console.log(c.every(item=>{
+	return item>5;
+}))
+
+console.log(c.some(item=>{
+	return item>5;
+}))
+
+console.log(c.indexOf(4, 0))
+console.log(c.lastIndexOf(4,3))
+
+
+console.log(c.find(item=>{
+	return item>5
+}))
+
+console.log(c.findIndex(item=>{
+	return item>5
+}))
 
 }
 
