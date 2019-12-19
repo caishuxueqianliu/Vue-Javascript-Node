@@ -75,3 +75,89 @@
 // })
 
 
+// 分割线
+
+//监听地址端口 Content-Type
+
+// var http=require('http')
+// var server=http.createServer()
+// server.on('request',(req,res)=>{
+// console.log(req.url)
+// console.log(req.socket.remoteAddress,req.socket.remotePort)
+// if(req.url==="/"){
+// 	res.setHeader('Content-Type','text/plain;charset=utf-8')
+// res.end('刘昊')
+// }
+// else {
+// 	res.setHeader('Content-Type','text/html;charset=utf-8')
+// res.end('<h1>刘昊啊</h1>')
+// }
+
+// })
+
+// server.listen(8080,()=>{
+// 	console.log('success')
+// })
+
+
+// 读取html文件
+
+// var http=require('http')
+// var server=http.createServer()
+// var fs=require('fs')
+
+// server.on('request',(req,res)=>{
+// console.log(req.url)
+// if(req.url==='/'){
+
+//    fs.readFile('./html.html',(err,data)=>{
+
+//    	if(err){
+//    		res.setHeader('Content-Type','text/plain;charset=utf-8')
+//    		res.end('文件读取失败')
+//    	}
+//    	else{
+//    	res.setHeader('Content-Type','text/html;charset=utf-8')
+//    		res.end(data)
+//    	}
+//    })
+
+// }else if(req.url==='/img'){
+// 	fs.readFile('./favicon.jpg',(err,data)=>{
+//     if(err){
+//     	res.setHeader('Content-Type','text/plain;charset=utf-8')
+//    		res.end('文件读取失败')
+//     }
+//   else{
+//   	 	res.setHeader('Content-Type','image/jpeg;charset=utf-8')
+//    		res.end(data)
+//   }
+
+// 	})
+
+
+// }else{
+
+// 	res.end('404')
+// }
+
+
+
+// })
+
+
+
+// server.listen(8080,()=>{
+// 	console.log('success...')
+// })
+
+
+
+//require 和export
+
+// var bExports=require('./02.js')
+// var fs=require('fs')
+// console.log(bExports.foo)
+// console.log(bExports.add(3,5))
+
+// bExports.readFile('./01.js');
