@@ -87,9 +87,23 @@
         // drawers: false,
       };
     },
+    mounted(){
+this.ax();
+
+    },
     methods: {
      
-      
+    async ax(){
+ //    await this.$http.get("http://localhost:3000/list").then((res)=>{
+ //  console.log(res)
+ // })
+  await this.$http.get("http://localhost:3000/list").then((res)=>{
+    console.log(res.data)
+  })
+
+
+
+      }
     }
 
 
