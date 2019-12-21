@@ -1,6 +1,10 @@
+//  JSON.parse(jsonString): 在一个字符串中解析出JSON对象
+//  JSON.stringify(obj) : 将一个JSON对象转换成字符串
+// npm init -y
+//npm i -S express
 // var a='hello';
 // console.log(a);
-// 成功
+// 成功3
 // data  数据
 // error  null
 // 失败
