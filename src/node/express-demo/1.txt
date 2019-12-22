@@ -1,0 +1,16 @@
+ npm init -y
+npm i -S express
+nnpm install -g nodemon
+npm i art-template
+npm install --save art-template
+npm install --save express-art-template
+
+ // npm install express-generator -g
+ // express --view=ejs server
+
+var bodyParser = require('body-parser')
+// 配置 body-parser 中间件（插件，专门用来解析表单 POST 请求体）
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
