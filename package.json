@@ -14,7 +14,7 @@
     "core-js": "^3.4.3",
     "element-ui": "^2.13.0",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mint-ui": "^2.2.13",
